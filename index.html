@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+<head>
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P9766SS');
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=1440,maximum-scale=2.0,user-scalable=1" name="viewport">
+  <meta content="telephone=no" name="format-detection"/>
+  <title>有限会社スタンス一級建築士事務所 | 岐阜県・愛知県で店舗デザイン・住宅設計</title>
+  <meta content="noindex, nofollow" name="robots">
+  
+  <meta content="【完全自由設計】スタンス一級建築士事務所。" name="description">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Shippori+Mincho:wght@400;500;600&family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+<style>
+/* =========================================
+   Variables
+   ========================================= */
+:root {
+  --font-primary: "Shippori Mincho", "Yu Mincho", serif;
+  --font-en: "Crimson Pro", serif;
+  --font-tel: "Roboto Flex", serif;
+  --clr-text: #43413f;
+  --clr-text-light: #555;
+  
+  /* Layout Variables */
+  --header-h-pc: 80px;
+  --header-h-sp: 60px;
+  --pdg-sec-pc: 100px;
+  --pdg-sec-sp: 60px; 
+  
+  /* Animation Variables */
+  --transit: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  --easing-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================
+   Reset & Base
+   ========================================= */
+*, *:before, *:after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: #ffffff; /* 純白に変更してなじませる */
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--clr-text);
+  background-color: transparent; 
+  line-height: 2.2;
+  letter-spacing: 0.08em;
+  padding-top: 0; 
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+a { text-decoration: none; color: inherit; transition: opacity 0.3s; cursor: pointer; }
+img { max-width: 100%; height: auto; vertical-align: bottom; }
+ul { list-style: none; }
+
+/* =========================================
+   Utility Classes
+   ========================================= */
+.flex { display: flex; }
+.txt-ctr { text-align: center; }
+.font-en { font-family: var(--font-en); }
+
+.inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 4%; width: 100%;
+  position: relative; z-index: 2;
+}
+.inner-md { max-width: 900px; }
+.inner-sm { max-width: 700px; }
+
+.section-pdg { padding: var(--pdg-sec-pc) 0; position: relative; z-index: 2; }
+#v-home .hero { padding-top: var(--header-h-pc); }
+
+.section-bg-white { background: transparent; backdrop-filter: none; }
+
+.mb-20 { margin-bottom: 20px; }
+.mb-40 { margin-bottom: 40px; }
+.mb-60 { margin-bottom: 60px; }
+
+/* =========================================
+   Rich Animations
+   ========================================= */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  filter: blur(10px);
+  transition: opacity 1.2s var(--easing-smooth), transform 1.2s var(--easing-smooth), filter 1.2s var(--easing-smooth);
+}
+.fade-in-up.is-visible {
+  opacity: 1; transform: translateY(0) scale(1); filter: blur(0);
+}
+
+.reveal-img-wrap {
+  overflow: hidden; position: relative; display: block;
+}
+.reveal-img-wrap img {
+  opacity: 0; transform: scale(1.15);
+  transition: transform 1.5s var(--easing-smooth), opacity 0.8s ease;
+}
+.reveal-img-wrap::after {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: #a9a6a8; 
+  z-index: 2; transform: translateX(0);
+  transition: transform 0.8s cubic-bezier(0.8, 0, 0.2, 1);
+}
+.reveal-img-wrap.is-visible img { opacity: 1; transform: scale(1); }
+.reveal-img-wrap.is-visible::after { transform: translateX(101%); }
+
+#transition-curtain {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+  background: #43413f; z-index: 999999;
+  transform: scaleY(0); transform-origin: bottom; pointer-events: none;
+  transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1);
+}
+#transition-curtain.active { transform: scaleY(1); transform-origin: bottom; }
+#transition-curtain.exit { transform: scaleY(0); transform-origin: top; }
+
+#loading {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: #fff; z-index: 99999;
+  display: flex; justify-content: center; align-items: center;
+  transition: opacity 0.8s ease, visibility 0.8s;
+}
+#loading.loaded { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.loader-svg { width: 50px; height: 50px; animation: rotate 1.6s linear infinite; }
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(450deg); } }
+.loader-svg circle {
+  fill: none; stroke: #43413f; stroke-width: 2; stroke-linecap: round;
+  animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes line {
+  0% { stroke-dasharray: 2, 85.964; transform: rotate(0); }
+  50% { stroke-dasharray: 65.973, 21.9911; stroke-dashoffset: 0; }
+  100% { stroke-dasharray: 2, 85.964; stroke-dashoffset: -65.973; transform: rotate(90deg); }
+}
+
+/* =========================================
+   FOG & BACKGROUND (FIXED BOUNDARIES)
+   ========================================= */
+.bg-vid {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  z-index: -3;
+}
+.bg-video {
+  width: 100%; height: 100%; object-fit: cover;
+  opacity: 0.1; filter: grayscale(100%) contrast(1.2);
+}
+
+.fog-container {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  overflow: hidden; z-index: -2;
+  pointer-events: none;
+}
+
+/* 【修正ポイント】
+   1. height: 160vh; top: -30vh;
+      → 画面の高さよりかなり大きくし、上下にはみ出させることで、画像の切れ目（境界線）を画面外へ追いやります。
+   2. background-size: 200vw 160vh;
+      → 横幅も縦幅も強制的に大きく引き伸ばし、隙間を埋めます。
+*/
+.fog-img {
+  position: absolute;
+  width: 300vw;
+  height: 160vh; /* 画面より大きく */
+  top: -30vh;    /* 上にずらして端を隠す */
+  left: 0;
+  background-repeat: repeat-x;
+  background-size: 200vw 160vh; /* 画像を引き伸ばしてなじませる */
+  background-position: center;
+  /* Stronger Purple Fog */
+  filter: invert(1) sepia(1) hue-rotate(240deg) saturate(4) opacity(0.6); 
+}
+
+.fog-img.first {
+  background-image: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png');
+  animation: fogflow 60s linear infinite;
+  z-index: 1;
+}
+
+.fog-img.second {
+  background-image: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png');
+  animation: fogflow 40s linear infinite reverse;
+  z-index: 2;
+  /* 奥の霧も位置をずらす */
+  top: -20vh; 
+  height: 140vh;
+  background-size: 200vw 140vh;
+  filter: invert(1) sepia(1) hue-rotate(260deg) saturate(3) opacity(0.5);
+}
+
+@keyframes fogflow {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-200vw, 0, 0); }
+}
+
+/* =========================================
+   Header (Transparent)
+   ========================================= */
+.header {
+  position: fixed; top: 0; left: 0; width: 100%; height: var(--header-h-pc);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  z-index: 1000; transition: height 0.3s ease;
+}
+.header-inner {
+  display: flex; justify-content: space-between; align-items: center;
+  height: 100%; padding: 0 40px; max-width: 1440px; margin: 0 auto;
+}
+.header-logo a {
+  font-family: var(--font-en); font-size: 1.3rem; line-height: 1.1; color: #000;
+  display: flex; flex-direction: column;
+}
+.header-logo span { font-size: 0.65rem; font-family: var(--font-primary); margin-top: 4px; color: #555; }
+
+.gnav-menu { display: flex; gap: 2.5rem; font-size: 0.85rem; letter-spacing: 0.1em; font-weight: 500; }
+.gnav-link { position: relative; display: block; padding: 10px 0; overflow: hidden;}
+.gnav-link::after {
+  content: ''; position: absolute; bottom: 5px; left: 0; width: 100%; height: 1px;
+  background: #000; transform: translateX(-101%); transition: transform 0.4s var(--easing-smooth);
+}
+.gnav-link:hover::after, .current-menu-item .gnav-link::after { transform: translateX(0); }
+
+/* =========================================
+   Page & Modules (No Borders)
+   ========================================= */
+.hero {
+  height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; position: relative; z-index: 5;
+}
+.hero h2 {
+  font-size: 2.6rem; font-weight: 500; letter-spacing: 0.3em;
+  text-shadow: 0 0 30px rgba(255,255,255,0.8);
+}
+
+.page-view { display: none; opacity: 0; transition: opacity 0.6s ease; }
+.page-view.active { display: block; opacity: 1; }
+
+.page_ttl {
+  text-align: center; padding: 120px 0 10px;
+  border-bottom: none;
+  margin-bottom: 40px;
+  background: transparent;
+}
+.page_ttl-en { font-size: 2.2rem; letter-spacing: 0.15em; text-transform: uppercase; line-height: 1; }
+.breadcrumbs { font-size: 0.75rem; color: var(--clr-text-light); font-family: var(--font-en); }
+
+.ttl-01 { font-size: 2rem; margin-bottom: 2rem; letter-spacing: 0.15em; text-align: center; font-weight: 400; }
+.ttl-02 { font-size: 1.5rem; margin-bottom: 1.5rem; letter-spacing: 0.1em; font-weight: 500; text-align: center; }
+
+.works-grid { display: flex; flex-direction: column; gap: 80px; }
+.post { position: relative; }
+.post-link { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; }
+
+.post-img-wrap {
+  width: 100%; aspect-ratio: 16/9; background: #f0f0f0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+.post-img { width: 100%; height: 100%; object-fit: cover; }
+.post-info { margin-top: 1.5rem; text-align: center; transition: 0.4s; }
+.post-ttl { font-size: 1.4rem; font-weight: 500; letter-spacing: 0.05em; }
+.post-meta { font-size: 0.85rem; color: var(--clr-text-light); }
+
+blockquote {
+  margin: 2em 0; padding: 3rem; position: relative; display: inline-block;
+  color: #666; background-color: rgba(255,255,255,0.7); backdrop-filter: blur(5px);
+  text-align: center; width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+  border: none;
+}
+blockquote::before, blockquote::after {
+  content: ""; position: absolute; width: 1.5em; height: 1.5em; opacity: 0.2;
+  background-size: contain; background-repeat: no-repeat;
+}
+blockquote::before {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE3OTIgMTc5MiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTc5MiAxNzkyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+Cgk8c3R5bGU+CgkJLnN0MHtmaWxsOiM2NjY2NjY7fQoJPC9zdHlsZT4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04MzIsOTYwdjM4NGMwLDUzLjMtMTguNyw5OC43LTU2LDEzNnMtODIuNyw1Ni0xMzYsNTZIMjU2Yy01My4zLDAtOTguNy0xOC43LTEzNi01NnMtNTYtODIuNy01Ni0xMzZWNjQwCgkJYzAtNjYuMywxMy41LTEzNS41LDQwLjUtMTk4LjVTMTY4LDMyNCwyMTQsMjc4czEwMC41LTgyLjUsMTYzLjUtMTA5LjVTMTQwMi43LDEyOCwxNDcyLDEyOGg2NAoJCWMxNy4zLDAsMzIuMy02LjMsNDUsMTlzMTksMjcuNywxOSw0NXYxMjhjMCwxNy4zLTYuMywzMi4zLTE5LDQ1cy0yNy43LDE5LTQ1LDE5aC02NGMtNzAuNywwLTEzMSwyNS0xODEsNzVzLTc1LDExMC4zLTc1LDE4MXYzMgoJCWMwLDI2LjcsOS4zLDQ9LjMsMjgsNjhzNDEuMywyOCw2OCwyOGgyMjRjNTMuMywwLDk4LjcsMTguNywxMzYsNTZTMTcyOCw5MDYuNywxNzI4LDk2MHoiLz4KPC9zdmc+Cg==');
+  top: 1rem; left: 1rem;
+}
+blockquote::after {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE3OTIgMTc5MiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTc5MiAxNzkyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+Cgk8c3R5bGU+CgkJLnN0MHtmaWxsOiM2NjY2NjY7fQoJPC9zdHlsZT4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04MzIsMzIwdjcwNGMwLDY5LjMtMTMuNSwxMzUuNS00MC41LDE5OC41UzcyOCwxMzQwLDY4MiwxMzg2cy0xMDAuNSw4Mi41LTE2My41LDEwOS41UzM4OS4zLDE1MzYsMzIwLDE1MzZoLTY0CgkJYy0xNy4zLDAtMzIuMy02LjMtNDUtMTlzLTE5LTI3LjctMTktNDV2LTEyOGMwLTE3LjMsNi4zLTMyLjMsMTktNDVzMjcuNy0xOSw0NS0xOWg2NGM3MC43LDAsMTMxLTI1LDE4MS03NXM3NS0xMTAuMyw3NS0xODF2LTMyCgkJYzAtMjYuNy05LjMtNDkuMy0yOC02OHMtNDEuMy0yOC02OC0yOEgyNTZjLTUzLjMsMC05OC43LTE4LjctMTM2LTU2cy01Ni04Mi43LTU2LTEzNlYzMjBjMC01My4zLDE4LjctOTguNyw1Ni0xMzZzODIuNy01NiwxMzYtNTYKCQloMzg0YzUzLjMsMCw5OC43LDE4LjcsMTM2LDU2UzgzMiwyNjYuNyw4MzIsMzIweiBNMTcyOCwzMjB2NzA0YzAsNjkuMy0xMy41LDEzNS41LTQwLjUsMTk4LjVTMTYyNCwxMzQwLDE1NzgsMTM4NgoJCXMtMTAwLjUsODIuNS0xNjMuNSwxMDkuNVMxMjg1LjMsMTUzNiwxMjE2LDE1MzZoLTY0Yy0xNy4zLDAtMzIuMy02LjMtNDUtMTlzLTE5LTI3LjctMTktNDV2LTEyOGMwLTE3LjMsNi4zLTMyLjMsMTktNDUKCQlzMjcuNy0xOSw0NS0xOWg2NGM3MC43LDAsMTMxLTI1LDE4MS03NXM3NS0xMTAuMyw3NS0xODF2LTMyYzAtMjYuNy05LjMtNDkuMy0yOC02OHMtNDEuMy0yOC02OC0yOGgtMjI0Yy01My4zLDAtOTguNy0xOC43LTEzNi01NgoJCWMtMzcuMy0zNy4zLTU2LTgyLjctNTYtMTM2VjMyMGMwLTUzLjMsMTguNy05OC43LDU2LTEzNmMzNy4zLTM3LjMsODIuNy01NiwxMzYtNTZoMzg0YzUzLjMsMCw5OC43LDE4LjcsMTM2LDU2UzE3MjgsMjY2LjcsMTcyOCwzMjAKCQl6Ii8+Cjwvc3ZnPgo=');
+  bottom: 0.875rem; right: 0.75rem;
+}
+
+.single-info-table, .company-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+.single-info-table th, .single-info-table td, .company-table th, .company-table td { 
+  padding: 1rem 0; 
+  border-bottom: none;
+}
+.single-info-table th, .company-table th { width: 25%; font-weight: 400; color: var(--clr-text-light); vertical-align: top; }
+
+.flow-item { 
+  display: flex; align-items: flex-start; gap: 2rem; 
+  border-bottom: none;
+  padding: 3rem 0; 
+}
+.flow-num { font-family: var(--font-en); font-size: 3rem; color: #ccc; line-height: 1; }
+
+.nf-element { width: 100%; padding: 15px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.8); font-family: inherit; transition: 0.3s; }
+.nf-element:focus { outline: none; border-color: #333; background: #fff; }
+
+.btn-link {
+  display: inline-block; padding: 14px 60px; border: 1px solid #333;
+  font-family: var(--font-en); letter-spacing: 0.1em; font-size: 0.85rem;
+  transition: 0.4s; background: rgba(255,255,255,0.8); color: #333; cursor: pointer;
+  position: relative; overflow: hidden; z-index: 1;
+}
+.btn-link::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: #333;
+  z-index: -1; transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-link:hover { color: #fff; }
+.btn-link:hover::before { width: 100%; }
+
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+.blog-img-wrap { aspect-ratio: 1/1; width: 100%; overflow: hidden; margin-bottom: 1rem; background: #f0f0f0; }
+.blog-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.post:hover .blog-img { transform: scale(1.1); }
+
+.footer {
+  margin-top: 60px; 
+  border-top: none;
+  padding: 80px 0 40px;
+  background: transparent;
+  text-align: center; position: relative; z-index: 20;
+}
+
+@media screen and (max-width: 768px) {
+  :root { --header-h-pc: 60px; --pdg-sec-pc: 40px; }
+  body { padding-top: 0; font-size: 14px; }
+  .header { height: var(--header-h-sp); }
+  .header-inner { padding: 0 1.2rem; }
+  .gnav-btn { display: block; width: 30px; height: 20px; position: relative; z-index: 1100; cursor: pointer; }
+  .gnav-btn span { position: absolute; width: 100%; height: 1px; background: #000; left: 0; transition: 0.4s; }
+  .gnav-btn span:nth-child(1) { top: 0; }
+  .gnav-btn span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+  .gnav-btn span:nth-child(3) { bottom: 0; }
+  .gnav-btn.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+  .gnav-btn.active span:nth-child(2) { opacity: 0; }
+  .gnav-btn.active span:nth-child(3) { bottom: auto; top: 50%; transform: translateY(-50%) rotate(-45deg); }
+
+  .gnav {
+    position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
+    background: rgba(255,255,255,0.98); z-index: 1050;
+    transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none;
+  }
+  .gnav.active { right: 0; opacity: 1; pointer-events: auto; }
+  .gnav-menu { flex-direction: column; text-align: center; gap: 2rem; font-size: 1.2rem; }
+  
+  .hero { height: 100vh; }
+  .hero h2 { font-size: 1.5rem; width: 90%; }
+  .inner { padding: 0 6vw; }
+  .works-grid { gap: 40px; }
+  .post-img-wrap { aspect-ratio: 3/2; }
+  .flow-item { flex-direction: column; gap: 1rem; padding: 2rem 0; }
+  .company-table th, .company-table td { display: block; width: 100%; padding: 0.5rem 0; border: none; }
+  .company-table th { padding-top: 1rem; font-weight: 600; }
+  .company-table tr { border-bottom: 1px solid #eee; display: block; padding-bottom: 1rem; }
+  .blog-grid { grid-template-columns: repeat(1, 1fr); gap: 30px; }
+  .page_ttl { padding: 100px 0 10px; }
+}
+</style>
+</head>
+<body id="top">
+
+<div id="loading">
+  <svg class="loader-svg" viewBox="0 0 50 50">
+    <circle cx="25" cy="25" r="20"></circle>
+  </svg>
+</div>
+
+<div id="transition-curtain"></div>
+
+<div class="bg-vid">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="https://architecture.stans.co.jp/wp/wp-content/themes/standard_sass/images/common/Stance_Background_Video.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="fog-container">
+  <div class="fog-img first"></div>
+  <div class="fog-img second"></div>
+</div>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <a href="#" onclick="nav('home');return false;">
+        ARCHITECT SAMPLE
+        <span>株式会社アーキテクト・サンプル</span>
+      </a>
+    </div>
+    
+    <div class="gnav-btn" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+    <nav class="gnav">
+      <ul class="gnav-menu font-en">
+        <li class="menu-item"><a href="#" onclick="nav('home');return false;" class="gnav-link">HOME</a></li>
+        <li class="menu-item"><a href="#" onclick="nav('works');return false;" class="gnav-link">WORKS</a></li>
+        <li class="menu-item"><a href="#" onclick="nav('modelroom');return false;" class="gnav-link">MODEL ROOM</a></li>
+        <li class="menu-item"><a href="#" onclick="nav('process');return false;" class="gnav-link">PROCESS</a></li>
+        <li class="menu-item"><a href="#" onclick="nav('blog');return false;" class="gnav-link">BLOG</a></li>
+        <li class="menu-item"><a href="#" onclick="nav('company');return false;" class="gnav-link">COMPANY</a></li>
+        <li class="menu-item"><a href="#" onclick="nav('contact');return false;" class="gnav-link">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="app">
+
+  <section id="v-home" class="page-view active">
+    <div class="hero">
+      <h2 style="text-align:center;" class="fade-in-up">心地いい場所には人が集まる</h2>
+    </div>
+
+    <div class="section-pdg">
+      <div class="inner inner-md">
+        <h2 class="ttl-01 font-en fade-in-up">WORKS</h2>
+        <div class="works-grid">
+          
+          <article class="post fade-in-up">
+            <a href="#" onclick="nav('w-kounan');return false;" class="post-link"></a>
+            <div class="reveal-img-wrap post-img-wrap">
+              <img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2024/05/kounan001j-scaled.jpg" alt="" class="post-img js-rellax" data-rellax-speed="-0.5">
+            </div>
+            <div class="post-info">
+              <h3 class="post-ttl">江南団地507号室</h3>
+              <p class="post-meta">東京都千代田区 ｜ 共同住宅・リノベーション</p>
+            </div>
+          </article>
+
+          <article class="post fade-in-up">
+            <a href="#" onclick="nav('w-tkm');return false;" class="post-link"></a>
+            <div class="reveal-img-wrap post-img-wrap">
+              <img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2022/07/006tkm-scaled.jpg" alt="" class="post-img js-rellax" data-rellax-speed="-0.5">
+            </div>
+            <div class="post-info">
+              <h3 class="post-ttl">BISTRONOMIE TKM</h3>
+              <p class="post-meta">東京都港区 ｜ フランス料理店</p>
+            </div>
+          </article>
+
+          <article class="post fade-in-up">
+              <a href="#" onclick="nav('w-setsugekka');return false;" class="post-link"></a>
+              <div class="reveal-img-wrap post-img-wrap">
+                <img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2017/10/the_setsugekka009.jpg" alt="" class="post-img js-rellax" data-rellax-speed="-0.5">
+              </div>
+              <div class="post-info">
+                <h3 class="post-ttl">THE 雪月花</h3>
+                <p class="post-meta">東京都中央区 ｜ 焼肉店</p>
+              </div>
+          </article>
+
+        </div>
+        <div class="txt-ctr fade-in-up" style="margin-top: 50px;">
+          <a href="#" onclick="nav('works');return false;" class="btn-link">WORKS MORE</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section-pdg section-bg-white">
+      <div class="inner inner-sm txt-ctr">
+          <h2 class="ttl-01 font-en fade-in-up">COMPANY</h2>
+          <div class="mb-40 fade-in-up">
+              <blockquote>
+                  <p style="font-weight:600; font-size:1.1rem;">株式会社アーキテクト・サンプル</p>
+                  <p style="margin-top:10px; color:#666;">〒100-0001 東京都千代田区サンプル1-1-1</p>
+                  <a href="tel:0312345678" class="tel" style="font-size:2rem; display:inline-block; margin-top:15px; font-family:var(--font-tel);">03-1234-5678</a>
+              </blockquote>
+          </div>
+          <a href="#" onclick="nav('company');return false;" class="btn-link fade-in-up">COMPANY MORE</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="v-works" class="page-view">
+      <div class="page_ttl"><div class="inner"><h1 class="page_ttl-en font-en">WORKS</h1><div class="breadcrumbs">HOME » WORKS</div></div></div>
+      <div class="inner inner-md section-pdg" style="padding-top:0;">
+           <div class="works-grid">
+              <article class="post fade-in-up">
+                  <a href="#" onclick="nav('w-kounan');return false;" class="post-link"></a>
+                  <div class="reveal-img-wrap post-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2024/05/kounan001j-scaled.jpg" class="post-img"></div>
+                  <div class="post-info"><h2 class="post-ttl">江南団地507号室</h2><div class="post-meta">東京都千代田区</div></div>
+              </article>
+              <article class="post fade-in-up">
+                  <a href="#" onclick="nav('w-tkm');return false;" class="post-link"></a>
+                  <div class="reveal-img-wrap post-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2022/07/006tkm-scaled.jpg" class="post-img"></div>
+                  <div class="post-info"><h2 class="post-ttl">BISTRONOMIE TKM</h2><div class="post-meta">東京都港区</div></div>
+              </article>
+               <article class="post fade-in-up">
+                  <a href="#" onclick="nav('w-setsugekka');return false;" class="post-link"></a>
+                  <div class="reveal-img-wrap post-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2017/10/the_setsugekka009.jpg" class="post-img"></div>
+                  <div class="post-info"><h2 class="post-ttl">THE 雪月花</h2><div class="post-meta">東京都中央区</div></div>
+              </article>
+              <article class="post fade-in-up">
+                  <a href="#" onclick="nav('w-blanc');return false;" class="post-link"></a>
+                  <div class="reveal-img-wrap post-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2023/09/010bp-scaled.jpg" class="post-img"></div>
+                  <div class="post-info"><h2 class="post-ttl">ブランピュール東京</h2><div class="post-meta">東京都新宿区</div></div>
+              </article>
+           </div>
+      </div>
+  </section>
+
+  <section id="v-w-kounan" class="page-view">
+      <div class="page_ttl"><div class="inner"><h1 class="page_ttl-en font-en">WORKS DETAIL</h1></div></div>
+      <div class="inner inner-md section-pdg" style="padding-top:0;">
+          <div class="mb-60 txt-ctr fade-in-up">
+              <h1 class="ttl-02">江南団地507号室</h1>
+              <p class="post-meta">東京都千代田区 ｜ 共同住宅</p>
+          </div>
+          <div class="single-gallery fade-in-up">
+              <div class="reveal-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2024/05/kounan001j-scaled.jpg"></div>
+              <div class="reveal-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2024/05/kounan006j-scaled.jpg"></div>
+              <div class="reveal-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2024/05/kounan005j-scaled.jpg"></div>
+          </div>
+          <div class="single-desc fade-in-up">
+              <p>モデルルームにする為、自社で団地の1室を購入しました。現場は築50年以上たつ鉄筋コンクリート造5階建ての5階になります。<br>寝食分離の典型的な団地の間取りから間仕切り壁を解体してワンルームにすることで開放的な空間をつくりました。</p>
+          </div>
+          <table class="single-info-table fade-in-up">
+              <tr><th>延床面積</th><td>14坪</td></tr>
+              <tr><th>住所</th><td>東京都千代田区サンプル1-1-1</td></tr>
+          </table>
+          <div class="txt-ctr fade-in-up" style="margin-top:60px;">
+              <a href="#" onclick="nav('works');return false;" class="btn-link">一覧へ戻る</a>
+          </div>
+      </div>
+  </section>
+
+  <section id="v-w-tkm" class="page-view">
+      <div class="page_ttl"><div class="inner"><h1 class="page_ttl-en font-en">WORKS DETAIL</h1></div></div>
+      <div class="inner inner-md section-pdg" style="padding-top:0;">
+           <div class="mb-60 txt-ctr fade-in-up"><h1 class="ttl-02">BISTRONOMIE TKM</h1><p class="post-meta">東京都港区 ｜ フレンチ</p></div>
+           <div class="single-gallery fade-in-up">
+              <div class="reveal-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2022/07/006tkm-scaled.jpg"></div>
+              <div class="reveal-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2022/07/001tkm-scaled.jpg"></div>
+           </div>
+           <div class="single-desc fade-in-up">
+               <p>伝統的な技法と歴史を重んじるフランス料理をもっとカジュアルに提供するお店を作りたいと話を頂き計画は始まった。<br>何もない空の箱に料理を作る場所と料理を頂く場所だけを設置するというシンプルな形にする。</p>
+           </div>
+           <table class="single-info-table fade-in-up">
+               <tr><th>延床面積</th><td>24坪</td></tr>
+               <tr><th>住所</th><td>東京都港区サンプル2-2-2</td></tr>
+           </table>
+           <div class="txt-ctr fade-in-up" style="margin-top:60px;">
+               <a href="#" onclick="nav('works');return false;" class="btn-link">一覧へ戻る</a>
+           </div>
+      </div>
+  </section>
+
+  <section id="v-w-setsugekka" class="page-view">
+      <div class="page_ttl"><div class="inner"><h1 class="page_ttl-en font-en">WORKS DETAIL</h1></div></div>
+      <div class="inner inner-md section-pdg" style="padding-top:0;">
+           <div class="mb-60 txt-ctr fade-in-up"><h1 class="ttl-02">THE 雪月花</h1><p class="post-meta">東京都中央区 ｜ 焼肉</p></div>
+           <div class="single-gallery fade-in-up">
+               <div class="reveal-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2017/10/the_setsugekka009.jpg"></div>
+               <div class="reveal-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2017/10/the_setsugekka004.jpg"></div>
+           </div>
+           <div class="single-desc fade-in-up">
+               <p>飲み屋街を抜けて賑いも少し落ち着いた所に、立方体のモダンな建物が。<br>THE 雪月花はファサードのガラスを通して、店内のライトや明かりが見えているので、暗闇の中で優しく光って目に止まります。</p>
+           </div>
+           <table class="single-info-table fade-in-up">
+               <tr><th>延床面積</th><td>87坪</td></tr>
+               <tr><th>住所</th><td>東京都中央区サンプル3-3-3</td></tr>
+           </table>
+           <div class="txt-ctr fade-in-up" style="margin-top:60px;">
+               <a href="#" onclick="nav('works');return false;" class="btn-link">一覧へ戻る</a>
+           </div>
+      </div>
+  </section>
+
+  <section id="v-w-blanc" class="page-view">
+      <div class="page_ttl"><div class="inner"><h1 class="page_ttl-en font-en">WORKS DETAIL</h1></div></div>
+      <div class="inner inner-md section-pdg" style="padding-top:0;">
+           <div class="mb-60 txt-ctr fade-in-up"><h1 class="ttl-02">ブランピュール東京</h1><p class="post-meta">東京都新宿区 ｜ スタジオ</p></div>
+           <div class="single-gallery fade-in-up"><div class="reveal-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2023/09/010bp-scaled.jpg"></div></div>
+           <div class="single-desc fade-in-up">
+               <p>店舗の引っ越しをするという事で、引っ越し先の携帯会社店舗跡の物件を全面改装するお話を頂きました。<br>話し合いを進めていく中で貸衣裳＆フォトスタジオは「人生の節目に訪れる大切な場所」と考えデザインを始めました。</p>
+           </div>
+           <div class="txt-ctr fade-in-up" style="margin-top:60px;">
+               <a href="#" onclick="nav('works');return false;" class="btn-link">一覧へ戻る</a>
+           </div>
+      </div>
+  </section>
+
+  <section id="v-modelroom" class="page-view">
+      <div class="page_ttl"><div class="inner"><h1 class="page_ttl-en font-en">MODEL ROOM</h1></div></div>
+      <div class="section-pdg" style="padding-top:0;">
+          <div class="inner inner-sm">
+             <div class="txt-ctr mb-60 fade-in-up">
+                 <h2 style="font-size:1.8rem; font-weight:500;">「サンプル団地507号室」</h2>
+                 <p style="margin-top:20px;">間仕切り壁を解体して開放的にすることで、<br>1階に咲く桜の花びらが風とともに舞い込んできました。</p>
+             </div>
+             <div class="mb-60 fade-in-up">
+                 <div class="reveal-img-wrap mb-20"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2025/01/modelroom-img01.jpg"></div>
+                 <div class="reveal-img-wrap"><img src="https://architecture.stans.co.jp/wp/wp-content/uploads/2025/01/modelroom-img02.jpg"></div>
+             </div>
+             <div class="txt-ctr fade-in-up">
+                 <h3 class="ttl-02">モデルルーム詳細（完全予約制）</h3>
+                 <table class="company-table">
+                     <tr><th>場所</th><td>サンプル団地 202棟 507号室</td></tr>
+                     <tr><th>期間</th><td>開催中</td></tr>
+                 </table>
+                 <div style="margin-top:50px;">
+                     <a href="#" onclick="nav('contact');return false;" class="btn-link">来場予約はこちら</a>
+                 </div>
+             </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="v-process" class="page-view">
+      <div class="page_ttl"><div class="inner"><h1 class="page_ttl-en font-en">PROCESS</h1></div></div>
+      <div class="section-pdg" style="padding-top:0;">
+          <div class="inner inner-md">
+              <div class="flow-list">
+                  <div class="flow-item fade-in-up"><div class="flow-num">01</div><div class="flow-body"><h3>お問い合わせ</h3><p>まずはお電話、お問い合わせフォームからご連絡ください。</p></div></div>
+                  <div class="flow-item fade-in-up"><div class="flow-num">02</div><div class="flow-body"><h3>基本設計</h3><p>ご納得いただけるまで打ち合わせとプレゼンテーションを繰り返します。</p></div></div>
+                  <div class="flow-item fade-in-up"><div class="flow-num">03</div><div class="flow-body"><h3>設計契約</h3><p>プレゼンテーション案にご承諾いただけましたら、設計契約を行います。</p></div></div>
+                  <div class="flow-item fade-in-up"><div class="flow-num">04</div><div class="flow-body"><h3>実施設計</h3><p>より詳細な見積もりにするために、詳細に図面を作成します。</p></div></div>
+                  <div class="flow-item fade-in-up"><div class="flow-num">05</div><div class="flow-body"><h3>現場監理・お引き渡し</h3><p>工事が図面通りに行われているかチェックします。</p></div></div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="v-company" class="page-view">
+      <div class="page_ttl"><div class="inner"><h1 class="page_ttl-en font-en">COMPANY</h1></div></div>
+      <div class="section-pdg" style="padding-top:0;">
+          <div class="inner inner-sm">
+             <div class="mb-60 txt-ctr fade-in-up">
+                 <h2 class="ttl-02 font-en">PHILOSOPHY</h2>
+                 <p style="line-height:2.4; margin-top:30px;">つながることで新たな価値を生みたい<br><br>建築は自然、社会、文化、未来など<br>無限に広がる要素とつながることができ<br>多様化する生活に合わせ、今なお変化を続けている</p>
+             </div>
+             <div class="fade-in-up">
+                 <h2 class="ttl-02 txt-ctr font-en">OVERVIEW</h2>
+                 <table class="company-table">
+                     <tbody>
+                         <tr><th>社名</th><td>株式会社アーキテクト・サンプル</td></tr>
+                         <tr><th>住所</th><td>〒100-0001 東京都千代田区サンプル1-1-1</td></tr>
+                         <tr><th>代表</th><td>山田 太郎</td></tr>
+                     </tbody>
+                 </table>
+             </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="v-contact" class="page-view">
+      <div class="page_ttl"><div class="inner"><h1 class="page_ttl-en font-en">CONTACT</h1></div></div>
+      <div class="section-pdg" style="padding-top:0;">
+          <div class="inner inner-sm">
+             <p class="txt-ctr mb-40 fade-in-up">お問い合わせ、ご質問など、お気軽にご連絡ください。</p>
+             <div class="nf-form-cont fade-in-up">
+                 <form onsubmit="event.preventDefault();alert('送信完了（デモ）');">
+                     <div class="nf-field-container">
+                         <label class="nf-field-label">お名前</label>
+                         <input type="text" class="nf-element" required>
+                     </div>
+                     <div class="nf-field-container">
+                         <label class="nf-field-label">メールアドレス</label>
+                         <input type="email" class="nf-element" required>
+                     </div>
+                     <div class="nf-field-container">
+                         <label class="nf-field-label">お問い合わせ内容</label>
+                         <textarea class="nf-element" rows="6" required></textarea>
+                     </div>
+                     <div class="txt-ctr">
+                         <button type="submit" class="btn-link">送 信</button>
+                     </div>
+                 </form>
+             </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="v-blog" class="page-view">
+      <div class="page_ttl"><div class="inner"><h1 class="page_ttl-en font-en">BLOG</h1></div></div>
+      <div class="section-pdg" style="padding-top:0;">
+          <div class="inner inner-md">
+              <div class="blog-grid">
+                 <article class="post fade-in-up">
+                     <div class="reveal-img-wrap blog-img-wrap"><img class="blog-img" src="https://architecture.stans.co.jp/wp/wp-content/uploads/2024/10/0acdca00203b7c4d550edb114a62ec15.jpg"></div>
+                     <div style="text-align:left;">
+                         <p class="post-date">2025.01.15</p>
+                         <h2 style="font-size:1rem; font-weight:500;">新しい設計プロジェクトが始動しました</h2>
+                     </div>
+                 </article>
+                 <article class="post fade-in-up">
+                     <div class="reveal-img-wrap blog-img-wrap"><img class="blog-img" src="https://architecture.stans.co.jp/wp/wp-content/uploads/2024/10/15272.jpg"></div>
+                     <div style="text-align:left;">
+                         <p class="post-date">2025.01.08</p>
+                         <h2 style="font-size:1rem; font-weight:500;">素材選びのこだわりについて</h2>
+                     </div>
+                 </article>
+                 <article class="post fade-in-up">
+                     <div class="reveal-img-wrap blog-img-wrap"><img class="blog-img" src="https://architecture.stans.co.jp/wp/wp-content/uploads/2024/09/19311.jpg"></div>
+                     <div style="text-align:left;">
+                         <p class="post-date">2024.12.25</p>
+                         <h2 style="font-size:1rem; font-weight:500;">年末年始の営業のお知らせ</h2>
+                     </div>
+                 </article>
+              </div>
+          </div>
+      </div>
+  </section>
+
+</div>
+
+<footer class="footer">
+  <div class="inner">
+      <div class="footer-lead fade-in-up">
+          <p>建物を建てるということは、人生のターニングポイントとなるとても重要なこと。</p>
+      </div>
+      <div class="footer-tel txt-ctr fade-in-up">
+          <div style="font-size:1rem; font-weight:600; margin-bottom:.5rem;">株式会社アーキテクト・サンプル</div>
+          <a href="tel:0312345678" style="font-size:1.5rem; font-family:var(--font-tel);">03-1234-5678</a>
+      </div>
+      <div class="footer_btm fade-in-up">
+           <div class="footer-nav">
+               <a href="#" onclick="nav('home');return false;">ホーム</a>
+               <a href="#" onclick="nav('contact');return false;">お問い合わせ</a>
+           </div>
+           <div class="txt-ctr"><small>© ARCHITECT SAMPLE.</small></div>
+      </div>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+<script>
+  // === Scroll Fade-Up & Image Reveal Observer ===
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -50px 0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+            entry.target.classList.add('is-visible');
+        }, 100); 
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // === SPA Router with Curtain Effect ===
+  window.nav = function(id) {
+      if(document.getElementById('v-'+id).classList.contains('active')) return;
+
+      const curtain = document.getElementById('transition-curtain');
+      curtain.classList.remove('exit');
+      curtain.classList.add('active');
+
+      setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'auto' });
+          
+          var vs = document.querySelectorAll('.page-view');
+          vs.forEach(function(v){
+              v.classList.remove('active');
+              if(v.id === 'v-' + id) {
+                  v.classList.add('active');
+              }
+          });
+          
+          document.querySelectorAll('.menu-item').forEach(function(el){
+              el.classList.remove('current-menu-item');
+              if(el.querySelector('a').getAttribute('onclick').includes(id)) {
+                  el.classList.add('current-menu-item');
+              }
+          });
+
+          document.querySelector('.gnav-btn').classList.remove('active');
+          document.querySelector('.gnav').classList.remove('active');
+
+          if(id === 'home' && window.rx) {
+               window.rx.refresh();
+          }
+          $('.single-gallery').slick('setPosition');
+
+          document.querySelectorAll('.fade-in-up, .reveal-img-wrap').forEach((el) => {
+              el.classList.remove('is-visible');
+              observer.observe(el);
+          });
+
+          setTimeout(() => {
+              curtain.classList.add('exit');
+              curtain.classList.remove('active');
+          }, 300); 
+
+      }, 600); 
+  };
+
+  window.toggleMenu = function() {
+      document.querySelector('.gnav-btn').classList.toggle('active');
+      document.querySelector('.gnav').classList.toggle('active');
+  };
+
+  // Init
+  document.addEventListener('DOMContentLoaded', function() {
+      var load = document.getElementById('loading');
+      if(load) {
+          setTimeout(function(){
+              load.classList.add('loaded');
+          }, 800); 
+      }
+      
+      if(document.querySelector('.js-rellax')) {
+          window.rx = new Rellax('.js-rellax', { speed: -0.5, center: true });
+      }
+
+      $('.single-gallery').slick({
+        dots: true,
+        infinite: true,
+        speed: 800,
+        fade: true,
+        cssEase: 'cubic-bezier(0.22, 1, 0.36, 1)', 
+        autoplay: true,
+        arrows: true
+      });
+
+      document.querySelectorAll('.fade-in-up, .reveal-img-wrap').forEach((el) => {
+        observer.observe(el);
+      });
+  });
+</script>
+</body>
+</html>
